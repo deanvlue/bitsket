@@ -1,0 +1,122 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+  padding-top:40px;
+}
+
+.navbar-inverse{
+  background-color: #a81c37;
+  background-image: linear-gradient(to bottom,#a81c37 0,#a81c37 100%);
+  background-repeat: repeat-x;
+}
+
+.navbar-header{
+  margin: 0px;
+}
+
+.cabecero{
+  font-family: 'Ubuntu Condensed', sans-serif;  
+  color: #FFF;
+  .icon{
+    padding-right: 5px;
+  }
+}
+
+
+h1.cabecero{
+  font-size: 300%;
+  padding-top: 5px;
+  margin-top: 0px;
+}
+
+.rosamex{
+  background-color:#dd3052;
+}
+
+.hero{
+  font-size: 400%;
+}
+
+
+.lined-group{
+  color:#fff;
+  form{
+    display: inline;
+  }  
+}
+
+.panel{
+  margin-top: 70px;
+}
+
+.panel-primary > .panel-heading{
+  background-color: #dd3052;
+  background-image: linear-gradient(to bottom,#dd3052 0,#a81c37 100%);
+  background-repeat: repeat-x;
+  border-color: #dd3052;
+}
+
+
+.panel-primary {
+  border-color: #dd3052;
+}
+
+.bs-docs-footer {
+padding-top: 40px;
+padding-bottom: 40px;
+margin-top: 100px;
+color: #777;
+text-align: center;
+border-top: 1px solid #e5e5e5;
+}
+
+.bs-docs-social {
+margin-bottom: 20px;
+text-align: center;
+}
+
+.bs-docs-social-buttons {
+display: inline-block;
+padding-left: 0;
+margin-bottom: 0;
+list-style: none;
+  li {
+      display: inline-block;
+      padding: 5px 8px;
+      line-height: 1;
+    }
+  p {
+      margin-bottom: 0;
+    }
+}
+
+.bs-docs-footer-links {
+  padding-left: 0;
+  margin-top: 20px;
+  color: #999;
+  li {
+    display: inline;
+    padding: 0 2px;
+  }
+}
+
+.navbar-nav{
+  li{
+      a{
+        color: #fff;
+      }
+  }
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #1280b5;
+  border-color: #06293b;
+  margin-left: 5px;
+  text-shadow: 0 1px 0 #333;
+}

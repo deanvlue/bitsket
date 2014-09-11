@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @listum.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @listum.descripcion %>
+</p>
+
+<p>
+  <strong>Preciomxn:</strong>
+  <%= @listum.preciomxn %>
+</p>
+
+
+<%= link_to 'Edit', edit_listum_path(@listum) %> |
+<%= link_to 'Back', lista_path %>
