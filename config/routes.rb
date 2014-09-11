@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rates
+
   resources :lista
 
   get 'paginas/terminos'

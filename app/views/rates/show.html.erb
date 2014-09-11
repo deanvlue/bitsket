@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mxnbtc:</strong>
+  <%= @rate.mxnbtc %>
+</p>
+
+<p>
+  <strong>Btcmxn:</strong>
+  <%= @rate.btcmxn %>
+</p>
+
+<%= link_to 'Edit', edit_rate_path(@rate) %> |
+<%= link_to 'Back', rates_path %>

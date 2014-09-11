@@ -6,10 +6,29 @@ body{
   padding-top: 64px;
 }
 
-.mosaico{
-  padding-top: 10px;
-  background-color: #f6f6f6;
-  margin-right: auto;
-  margin-left: auto;
-  clear: both;
+@media (min-width: 768px) {
+  .mosaico {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .mosaico {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .mosaico {
+    width: 1170px;
+  }
+}
+
+@media all{
+  .mosaico{
+    padding-top: 10px;
+    background-color: #f6f6f6;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }

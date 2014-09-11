@@ -5,6 +5,7 @@ class ListaController < ApplicationController
   # GET /lista.json
   def index
     @lista = Listum.all
+    @rates = Rate.last
   end
 
   # GET /lista/1

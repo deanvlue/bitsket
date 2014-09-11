@@ -1,19 +1,18 @@
 <div class="center">
   <div class="mosaico">
-    <div class="container">
       <div class="row">
         <% @lista.each do |listum| %>
           <div class="col-md-3">
             <div class="thumbnail">
                 <div class="caption">
                   <h3><%= listum.nombre %></h3>
-                  <p><%= number_to_currency(listum.preciomxn) %></p>
+                  <p><%= number_to_currency(listum.preciomxn) %> MXN</p>
+                  <p><%= (listum.preciomxn * @rates.mxnbtc) * 1000 %> mBTC</p>
                 </div> <!-- div caption -->
               </div> <!-- div thumbnail -->
             </div> <!-- div col-md-3 -->
           <% end %>
         </div> <!-- class row -->
-      </div> <!-- container -->
   </div> <!-- mosaico -->
 </div> <!-- center -->
 <br>

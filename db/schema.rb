@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910052724) do
+ActiveRecord::Schema.define(version: 20140911053503) do
 
   create_table "lista", force: true do |t|
     t.string   "nombre"
     t.text     "descripcion"
     t.decimal  "preciomxn"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rates", force: true do |t|
+    t.float    "mxnbtc"
+    t.float    "btcmxn"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
