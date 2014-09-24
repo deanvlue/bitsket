@@ -3,16 +3,34 @@
       <div class="row">
         <% @lista.each do |listum| %>
           <div class="col-md-3">
-            <div class="thumbnail">
-                <div class="caption">
-                  <h3><%= listum.nombre %></h3>
-                  <p><%= number_to_currency(listum.preciomxn) %> MXN</p>
-                  <p><%= (listum.preciomxn * @rates.mxnbtc) * 1000 %> mBTC</p>
-                </div> <!-- div caption -->
-              </div> <!-- div thumbnail -->
-            </div> <!-- div col-md-3 -->
-          <% end %>
-        </div> <!-- class row -->
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                  <h4><%= listum.nombre %></h4>
+                  <div class="row seller">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="price-tag">
+                        <h5>mBTC <%= (listum.preciomxn * @mxnbtc.mxnbtc)*1000 %></h5> <p><%= number_to_currency(listum.preciomxn) %> MXN </p>
+                      </div>
+                    </div>
+                </div>
+                </div> <!-- panel-heading -->
+                <div class="panel-body">
+                  <div class="thumbnail">
+                    <%= image_tag "bitsket_75.png" %>
+                  </div>
+                  <p class="descripcion"><%= listum.descripcion %></p>
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-6">
+                      <button class="btn btn-primary">Comprar</button>
+                    </div>
+                  </div>
+              </div>
+            </div><!-- panel panel-primary -->
+          </div> <!-- div col-md-3 -->
+        <% end %>
+      </div> <!-- class row -->
   </div> <!-- mosaico -->
 </div> <!-- center -->
 <br>

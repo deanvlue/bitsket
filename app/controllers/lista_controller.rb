@@ -5,7 +5,7 @@ class ListaController < ApplicationController
   # GET /lista.json
   def index
     @lista = Listum.all
-    @rates = Rate.last
+    @mxnbtc = Rate.last
   end
 
   # GET /lista/1
@@ -72,4 +72,5 @@ class ListaController < ApplicationController
     def listum_params
       params.require(:listum).permit(:nombre, :descripcion, :preciomxn, :preciobtc)
     end
-end
+   
+ end
