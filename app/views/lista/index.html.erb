@@ -2,32 +2,24 @@
   <div class="mosaico">
       <div class="row">
         <% @lista.each do |listum| %>
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                  <h4><%= listum.nombre %></h4>
-                  <div class="row seller">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="price-tag">
-                        <h5>mBTC <%= (listum.preciomxn * @mxnbtc.mxnbtc)*1000 %></h5> <p><%= number_to_currency(listum.preciomxn) %> MXN </p>
-                      </div>
-                    </div>
+          <div class="col-sm-3">
+            <div class="thumbnail">
+              <div class="caption">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <h3><%= listum.nombre %></h3>
+                  </div>
+                  <div class="col-xs-6">
+                    <h4>mBTC <%= (listum.preciomxn * @mxnbtc.mxnbtc)*1000 %></h4> <p class="preciomxn"><%= number_to_currency(listum.preciomxn) %> MXN </p>
+                  </div>
                 </div>
-                </div> <!-- panel-heading -->
-                <div class="panel-body">
-                  <div class="thumbnail">
-                    <%= image_tag "bitsket_75.png" %>
-                  </div>
-                  <p class="descripcion"><%= listum.descripcion %></p>
-                  <div class="row">
-                    <div class="col-sm-6 col-sm-offset-6">
-                      <button class="btn btn-primary">Comprar</button>
-                    </div>
-                  </div>
               </div>
-            </div><!-- panel panel-primary -->
+             <img data-src="holder.js/300x300" alt="..." src="assets/bitsket_45.png">
+             <div class="caption">
+              <p class="descripcion"><%= listum.descripcion %></p>
+               <p class="btn-shop-car"><a href="#" class="btn btn-default" role="button">Añadir a carrito</a></p>
+              </div>
+            </div>
           </div> <!-- div col-md-3 -->
         <% end %>
       </div> <!-- class row -->
