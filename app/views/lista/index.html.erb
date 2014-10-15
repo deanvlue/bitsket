@@ -1,20 +1,25 @@
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+
 <div class="center">
   <div class="mosaico">
-      <div class="row">
+      <div class="row-stack">
         <% @lista.each do |listum| %>
           <div class="col-sm-3">
             <div class="thumbnail">
-              <div class="caption">
+              <div class="caption color-gray">
                 <div class="row">
                   <div class="col-xs-6">
-                    <h3><%= listum.nombre %></h3>
+                    <h3 class="text-center"><%= listum.nombre %></h3>
                   </div>
                   <div class="col-xs-6">
                     <h4>mBTC <%= (listum.preciomxn * @mxnbtc.mxnbtc)*1000 %></h4> <p class="preciomxn"><%= number_to_currency(listum.preciomxn) %> MXN </p>
                   </div>
                 </div>
               </div>
-             <img data-src="holder.js/300x300" alt="..." src="assets/bitsket_45.png">
+                <div class="img-bg">
+                  <img data-src="holder.js/200x200" alt="..." src="/assets/card.png">
+                </div>
              <div class="caption">
               <p class="descripcion"><%= listum.descripcion %></p>
                <p class="btn-shop-car"><a href="#" class="btn btn-default" role="button">Añadir a carrito</a></p>

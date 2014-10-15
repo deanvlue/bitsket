@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap.css";
+
 body{
   padding-top: 64px;
 }
@@ -94,15 +96,35 @@ p.descripcion{
       }
    
      p.btn-shop-car{
-      text-align: right;
-     } 
+       text-align: right;
+      } 
     
   }
   
-  img{
-    background-color: #888;
-    padding-left:auto;
+  img {
+    margin-left:auto;
+    margin-right: auto;
   }
-
+  
+  .img-bg{
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+  }
 }
+
+
+
+
+.col-sm-3:nth-child(4n+1){
+  clear: left;
+}
+
+.row-stack{
+  @extend .row;
+  
+}
+
+
+
 

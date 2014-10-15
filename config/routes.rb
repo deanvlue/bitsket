@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :rates
 
   resources :lista
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #Configura el inicio del site a "home#index"
-  root "home#index"
+  root "lista#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
