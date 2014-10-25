@@ -1,2 +1,97 @@
-<h1>Paginas#index</h1>
-<p>Find me in app/views/paginas/index.html.erb</p>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron rosamex">
+      <div class="container">
+        <div class="col-sm-5">
+          <%= image_tag "bitsket.png", class: "img-responsive" %>
+        </div>
+        <div class="col-sm-7">
+          <h2 class="cabecero hero">El primer mercado mexicano para comprar y vender en Bitcoin.</h2>
+          <h2 class="cabecero hero">Del cliente a tu billetera!</h2>
+          <!--<h3><button type="button" class="btn btn-warning">Empieza
+              Ahora!</button></h3>-->
+          <p>
+            <div class="lined-group">
+              <form action="https://www.facebook.com/bitsket/" method="get">
+                <button class="btn btn-facebook"><i class="fa fa-facebook"></i></button>
+              </form>    
+              <form action="https://www.twitter.com/bitsket/" method="get">
+                <button class="btn btn-twitter"><i class="fa fa-twitter"></i></button>
+              </form>   
+            </div>
+            <a href="https://www.positivessl.com" style="font-family: arial; font-size: 10px; color: #212121; text-decoration: none;"><img src="https://www.positivessl.com/images-new/PositiveSSL_tl_trans2.png" alt="SSL Certificate" title="SSL Certificate" border="0" /></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-sm-12">
+           <center><h2> ¿Cómo funciona?</h2></center>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <%= image_tag "inscribete.png", data: {src: "holder.js/150x150"} %>
+            <!--<img data-src="holder.js/150x150" src="img/inscribete.png">-->
+            <div class="caption">
+              <h2>Inscríbete</h2>
+              <p>Da click en comienza ahora, proporciona tu dirección y el código de tu billetera bitcoin en donde se depositarán tus pagos. Es gratis!</p>
+              <!--<p><a class="btn btn-default" href="#" role="button">Comienza
+                ahora&raquo;</a></p>-->
+            </div> <!-- div.caption -->
+          </div> <!-- div.thumbnail -->
+        </div><!-- div.col-md-4 -->
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <%= image_tag "agrega.png", data: {src: "holder.js/150x150"} %>
+            <div class="caption">
+              <h2>Agrega productos</h2>
+              <p>Agrega productos y ponles el precio en Pesos Mexicanos, <b>bitsket</b> hará toda la conversión por tí</p>
+              <!--<p><a class="btn btn-default" href="#" role="button">Agrega
+                Productos&raquo;</a></p>-->
+            </div> <!-- div.caption -->
+          </div> <!-- div.thumbnail -->
+        </div><!-- div.col-md-4 -->
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <%= image_tag "cobra.png", data: {src: "holder.js/150x150"} %>
+            <div class="caption">
+              <h2>Recibe tu pago</h2>
+              <p>Recibe tus pagos seguros, sin intermediarios y en minutos!</p>
+              <!--<p><a class="btn btn-default" href="#" role="button">Compra
+                ahora&raquo;</a></p>-->
+            </div> <!-- div.caption -->
+          </div> <!-- div.thumbnail -->
+        </div><!-- div.col-md-4 -->
+      </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe width="340" height="215" src="https://www.youtube.com/embed/blSUEotB-s8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-4">
+        <h3>¿Qué es Bitcoin?</h3>
+        <p>Bitcoin es una moneda digital, descentralizada. No necesitas bancos ni instituciones financieras para mandar tu dinero. Puedes mandar dinero
+            a cualquier parte del mundo de manera segura y rápida, con comisiones casi nulas.
+      </div>
+    </div>
+
+      <hr>
+
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
