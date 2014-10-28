@@ -14,10 +14,22 @@
         </div> <!--navbar-header-->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Inscribete", new_user_registration_path %></li>
-            <li><%= link_to "Log In", new_user_session_path %></li>
-            <li><%= link_to "Administrar", edit_user_registration_path %></li>
-            <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to new_user_registration_path do %>
+                  <i class="fa fa-user"></i>
+                <% end %>
+            </li>
+            <li><%= link_to new_user_session_path do %>
+                  <i class="fa fa-sign-in"></i>
+                <% end %>
+            </li>
+            <li><%= link_to edit_user_registration_path do %>
+                  <i class="fa fa-cog"></i>
+                <% end %>
+            </li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fa fa-power-off"></i>
+                <% end %>
+            </li>
           </ul><!--nav navbar-nav-->
         </div><!-- collapse navbar-collapse-->
       </div> <!-- container-fluid-->
