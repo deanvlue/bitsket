@@ -10,26 +10,29 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= image_tag 'bitsket_mix_60.png', width: "140px" %>
+          <%= image_tag 'bitsket_mix_60.png', width: "100px" %>
         </div> <!--navbar-header-->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to new_user_registration_path do %>
-                  <i class="fa fa-user"></i>
-                <% end %>
-            </li>
-            <li><%= link_to new_user_session_path do %>
-                  <i class="fa fa-sign-in"></i>
-                <% end %>
-            </li>
-            <li><%= link_to edit_user_registration_path do %>
-                  <i class="fa fa-cog"></i>
-                <% end %>
-            </li>
-            <li><%= link_to destroy_user_session_path, method: :delete do %>
-                  <i class="fa fa-power-off"></i>
-                <% end %>
-            </li>
+            <% if user_signed_in? %>
+              <li><%= link_to edit_user_registration_path do %>
+                <i class="fa fa-cog"> USUARIO </i>
+                  <% end %>
+              </li>
+              <li><%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="fa fa-power-off"></i>
+                  <% end %>
+                  </li>
+            <% else %>
+              <li><%= link_to new_user_registration_path, title: 'Inscribete' do %>
+                    <i class="fa fa-pencil"></i>
+                  <% end %>
+              </li>
+              <li><%= link_to new_user_session_path, title: 'Log In' do %>
+                    <i class="fa fa-user"></i>
+                  <% end %>
+                  </li>
+            <% end %>
           </ul><!--nav navbar-nav-->
         </div><!-- collapse navbar-collapse-->
       </div> <!-- container-fluid-->

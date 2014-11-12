@@ -13,7 +13,13 @@
                     <h3 class="text-center"><%= listum.nombre %></h3>
                   </div>
                   <div class="col-xs-6">
-                    <h4>mBTC <%= (listum.preciomxn * @mxnbtc.mxnbtc)*1000 %></h4> <p class="preciomxn"><%= number_to_currency(listum.preciomxn) %> MXN </p>
+                    <% preciobtc = (listum.preciomxn * @mxnbtc.mxnbtc) %>
+                    <% if preciobtc >= 1 %>
+                     <h4>BTC <%= preciobtc %></h4> 
+                   <% else%>
+                     <h4>mBTC <%= preciobtc * 1000%></h4> 
+                   <% end%>                     
+                    <p class="preciomxn"><%= number_to_currency(listum.preciomxn) %> MXN </p>
                   </div>
                 </div>
               </div>
