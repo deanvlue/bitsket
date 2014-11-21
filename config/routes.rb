@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #Configura el inicio del site a "home#index"
-  root "lista#index"
+  root "products#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
