@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
+  get 'store/index'
+
   resources :products
 
   devise_for :users
@@ -23,7 +29,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #Configura el inicio del site a "home#index"
-  root "products#index"
+  #root "products#index"
+  root to: 'store#index', as: 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

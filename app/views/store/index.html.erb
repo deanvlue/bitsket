@@ -1,0 +1,29 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Productos</h1>
+
+<div class="row">
+<% @products.each do |product| %>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <div class="caption">
+        <div class="row">
+          <div class="col-sm-6"><h3><%= product.title %></h3></div>
+          <div class="col-sm-6">
+            <span class="price pull-right"> <%= number_with_precision (product.price/3000)*1000, precision: 2 %> mBTC / $ <%= product.price%> MXN</span>
+          </div>
+        </div>
+      </div>
+      <div class="img-holder">
+        <%= image_tag product.image_url, :data=>{:src => "holder.js/100x100"} , class:"img-product center-block"%>
+      </div>
+      <div class="caption">
+        <p><%= product.description %></p>
+        <p> <a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+    </div>
+   </div>
+  </div>
+<% end%>
+</div>
